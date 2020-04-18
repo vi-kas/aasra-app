@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<header></header><events></events>',
-  styleUrls: ['./app.component.css'],
+  template: ` <header></header>
+    <router-outlet></router-outlet>`,
 })
 export class AppComponent {
   title = 'aasra-app';
