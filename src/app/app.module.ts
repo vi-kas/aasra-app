@@ -14,11 +14,19 @@ import { HomeComponent } from './home/home.component';
 import { ToastrService } from './common/services/toastr.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
-import { ContactComponent } from './contact/contact.componect';
+import { ContactComponent } from './contact/contact.component';
 import { Error404Component } from './errors/404.component';
+import { AuthService } from './user/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProjectComponent } from './projects/project.component';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -27,6 +35,7 @@ import { Error404Component } from './errors/404.component';
     EventDetailsComponent,
     EventThumbnailComponent,
     ContactComponent,
+    ProjectComponent,
     Error404Component,
   ],
   providers: [
@@ -34,6 +43,7 @@ import { Error404Component } from './errors/404.component';
     ToastrService,
     EventRouteActivator,
     EventListResolver,
+    AuthService,
     { provide: 'canDeactivateEventThumbnail', useValue: checkDirtyState },
   ],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ export class ToastrService {
     console.log(message, title);
     toastr.success(message, title);
   }
+
   info(message: string, title?: string) {
     toastr.info(message, title);
   }

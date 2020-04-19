@@ -1,9 +1,37 @@
-<div>
-  <div><h1>User profile goes here</h1></div>
-  <br />
-  <br />
-  <button type="submit" class="btn btn-primary">Save</button>
-  <button type="button" class="btn btn-default">
-    Cancel
-  </button>
+<h2>User Profile</h2>
+<hr />
+<div class="col-md-4">
+  <form
+    [formGroup]="profileForm"
+    (ngSubmit)="saveProfile(profileForm.value)"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="name"> Name:</label>
+
+      <input
+        formControlName="name"
+        type="text"
+        id="name"
+        class="form-control"
+        placeholder="Name"
+      />
+    </div>
+    <div class="form-group" [ngClass]="{ error: !validateUserName() }">
+      <label for="userName">Username:</label>
+      <input
+        formControlName="userName"
+        type="text"
+        id="userName"
+        class="form-control"
+        placeholder="Username"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Save
+    </button>
+    <button type="button" (cancel)="cancel()" class="btn btn-default">
+      Cancel
+    </button>
+  </form>
 </div>

@@ -26,26 +26,56 @@
       <div class="navbar-nav">
         <div class="nav-link-item">
           <div class="nav-link">
-            <span class="navItemText">HOME</span>
+            <a [routerLink]="['home']">
+              <span class="navItemText">HOME</span>
+            </a>
           </div>
         </div>
         <div class="nav-link-item">
           <div class="nav-link">
-            <span class="navItemText">EVENTS</span>
+            <a [routerLink]="['events']">
+              <span class="navItemText">EVENTS</span>
+            </a>
           </div>
         </div>
         <div class="nav-link-item">
           <div class="nav-link">
-            <span class="navItemText">VOLUNTEERS</span>
+            <a [routerLink]="['']">
+              <span class="navItemText">VOLUNTEERS</span>
+            </a>
           </div>
         </div>
         <div class="nav-link-item">
           <div class="nav-link">
-            <span class="navItemText">PROJECTS</span>
+            <a [routerLink]="['projects']">
+              <span class="navItemText">PROJECTS</span>
+            </a>
           </div>
         </div>
         <div class="nav-link-item">
-          <div class="nav-link"><span class="navItemText">ABOUT</span></div>
+          <div class="nav-link">
+            <a [routerLink]="['contactus']">
+              <span class="navItemText">CONTACT US</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-link-item">
+          <div class="nav-link">
+            <a
+              *ngIf="!authService.isAuthenticated()"
+              [routerLink]="['user/login']"
+            >
+              <span class="navItemText">Login</span>
+            </a>
+            <a
+              *ngIf="authService.isAuthenticated()"
+              [routerLink]="['user/profile']"
+            >
+              <span class="navItemText"
+                >Welcome {{this.authService.currentUser.name}}</span
+              >
+            </a>
+          </div>
         </div>
       </div>
     </div>
