@@ -4,10 +4,14 @@ import { IEvent } from './shared';
 @Component({
   selector: 'event-thumbnail',
   template: `
-    <div [routerLink]="['/events', event.id]">
+    <div>
       <h2>{{ event.title }}</h2>
       <button class="btn btn-primary" (click)="handleClick()">Like</button>
+      <button class="btn btn-info" modal-trigger="fooModal">FooModal</button>
     </div>
+    <simple-modal elementId="fooModal" title="{{ event.title }}">
+      <div><h2>Something to show here...</h2></div>
+    </simple-modal>
   `,
 })
 export class EventThumbnailComponent {
@@ -24,3 +28,9 @@ export class EventThumbnailComponent {
     this.eventClick.emit(this.event.title);
   }
 }
+
+// <div [routerLink]="['/events', event.id]">
+//       <h2>{{ event.title }}</h2>
+//       <button class="btn btn-primary" (click)="handleClick()">Like</button>
+//       <button class="btn btn-info" modal-trigger="fooModal">FooModal</button>
+//     </div>

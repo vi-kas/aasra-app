@@ -11,7 +11,7 @@ import {
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { HomeComponent } from './home/home.component';
-import { ToastrService } from './common/services/toastr.service';
+import { TOASTR_TOKEN, IToastr } from './common/services/toastr.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ContactComponent } from './contact/contact.component';
@@ -19,6 +19,12 @@ import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './projects/project.component';
+import { JQ_TOKEN } from './common/services/jquery.service';
+import { SimpleModalComponent } from './common/simpleModal.component';
+import { ModalTriggerDirective } from './common/directives/modalTrigger.directive';
+
+let toastr: IToastr = window['toastr'];
+let jQuery = window['$'];
 
 @NgModule({
   imports: [
@@ -36,11 +42,14 @@ import { ProjectComponent } from './projects/project.component';
     EventThumbnailComponent,
     ContactComponent,
     ProjectComponent,
+    SimpleModalComponent,
+    ModalTriggerDirective,
     Error404Component,
   ],
   providers: [
     EventService,
-    ToastrService,
+    { provide: TOASTR_TOKEN, useValue: toastr },
+    { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
     AuthService,
