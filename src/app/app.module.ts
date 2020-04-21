@@ -24,6 +24,7 @@ import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/directives/modalTrigger.directive';
 import { TeamComponent } from './home/team.component';
 import { TitlecardComponent } from './home/titlecard.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -38,6 +39,7 @@ let jQuery = window['$'];
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     TeamComponent,
     TitlecardComponent,
     HomeComponent,

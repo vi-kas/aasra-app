@@ -5,12 +5,10 @@ import { IContact } from './contact.model';
 @Component({
   templateUrl: './contact.component.html',
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
   contact: IContact;
 
   constructor(private router: Router) {}
-
-  ngOnInit() {}
 
   saveContactForm(values: IContact) {
     console.log(values);
