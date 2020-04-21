@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { EventService } from './shared/event.service';
-import { ToastrService } from '../common/services/toastr.service';
+import { TOASTR_TOKEN, IToastr } from '../common/services/toastr.service';
 import { ActivatedRoute } from '@angular/router';
 import { IEvent } from './shared';
 
@@ -21,7 +21,7 @@ export class EventsComponent implements OnInit {
 
   constructor(
     private eventService: EventService,
-    private toastrService: ToastrService,
+    @Inject(TOASTR_TOKEN) private toastr: IToastr,
     private route: ActivatedRoute
   ) {}
 
@@ -31,6 +31,6 @@ export class EventsComponent implements OnInit {
 
   handleClickEvent(data) {
     console.log('Received:', data);
-    this.toastrService.success('success', data);
+    this.toastr.success('success', data);
   }
 }
