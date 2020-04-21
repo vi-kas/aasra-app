@@ -22,6 +22,8 @@ import { ProjectComponent } from './projects/project.component';
 import { JQ_TOKEN } from './common/services/jquery.service';
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/directives/modalTrigger.directive';
+import { TeamComponent } from './home/team.component';
+import { TitlecardComponent } from './home/titlecard.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -36,6 +38,8 @@ let jQuery = window['$'];
   declarations: [
     AppComponent,
     HeaderComponent,
+    TeamComponent,
+    TitlecardComponent,
     HomeComponent,
     EventsComponent,
     EventDetailsComponent,
