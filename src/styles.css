@@ -4,68 +4,103 @@
   padding: 0;
 }
 
+html,
 body {
-  background-image: url("/assets/images/aasra_bg_1.png");
+  height: 100%;
+}
+
+body {
+  /* background-image: url("/assets/images/aasra_bg_1.png"); */
   background-repeat: no-repeat;
   background-size: auto;
   background-size: cover;
 }
 
-/* background-image: url("/src/public/images/bg_7.jpg"); */
-
-#back-0 {
-  /* background-color: #ebfff9; */
+.navItemText {
+  color: #000000;
+  font-family: "Gotham";
+  font-size: 1.5em;
+  font-weight: 500;
+  font-stretch: semi-condensed;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
 
-.navbar-brand {
-  margin-left: -10px;
-}
-
-.navbar-nav {
-  margin-left: 20%;
+.navItemText:hover,
+.navItemText:active,
+.navItemText:focus {
+  color: #e81a5b;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nav-link-item {
-  margin-left: 1.5rem;
+  margin-left: 1.2em;
 }
 
-.navItemText {
+.footerText {
   color: #e81a5b;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.2em;
-  font-weight: lighter;
+  font-family: "Gotham";
+  font-size: 1em;
+  font-weight: 600;
 }
 
-.navItemText:hover {
-  color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.2em;
-  font-weight: lighter;
+.heroDiv {
+  margin-top: 4%;
+  position: absolute;
+  left: 0px;
+  width: calc(100% - 10px);
+  height: 550px;
+  background-color: #e81a5b;
+  padding: 100px;
+  font-family: Gotham;
+  color: aliceblue;
+  font-size: 100px;
+  font-weight: 500;
 }
 
+/* 
+.navbar-brand {
+  margin-left: 0px;
+} */
+/* 
+.navbar-nav {
+  margin-left: 32%;
+} */
+/* 
+.nav-link-item {
+  margin-left: 1.5rem;
+} */
+/* 
 /* Home */
-#hompage-container {
-  /* background-color: whitesmoke; */
-  height: 2000px;
+/* #hompage-container {
+  background-color: whitesmoke;
+  height: 1000px;
   margin-top: 250px;
-}
+} */
 
-.a-hero-div {
+/* .a-hero-div {
   margin-top: -18%;
-}
-
+} */
+/* 
 #home-img1-container {
   margin-left: -200px;
   margin-top: -10%;
-}
-
+} */
+/* 
 #home-img1 {
   width: 750px;
   height: 700px;
-}
-
+} */
+/* 
 #call-to-cons-p {
   font-size: 42px;
   letter-spacing: 0.6px;
@@ -73,8 +108,8 @@ body {
   font-family: AvantGardeGothicITCW01XLt;
   text-transform: uppercase;
   color: #e81a5b;
-}
-
+} */
+/* 
 #call-to-cons {
   margin-left: 10%;
   margin-top: 80px;
@@ -82,8 +117,8 @@ body {
 
 #team {
   margin-top: 150px;
-}
-
+} */
+/* 
 #meet-our-team {
   margin-left: 5%;
   margin-top: 260px;
@@ -148,7 +183,7 @@ body {
   font-size: 0.6em;
   letter-spacing: 0.2px;
   color: #000000;
-}
+} */
 
 /* Custom Shapes */
 .rectangle {

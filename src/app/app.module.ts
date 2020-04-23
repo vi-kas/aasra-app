@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {
   EventsComponent,
@@ -15,16 +16,17 @@ import { TOASTR_TOKEN, IToastr } from './common/services/toastr.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ContactComponent } from './contact/contact.component';
-import { Error404Component } from './errors/404.component';
-import { AuthService } from './user/auth.service';
+import { Error404Component } from './common/errors/404.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './projects/project.component';
 import { JQ_TOKEN } from './common/services/jquery.service';
-import { SimpleModalComponent } from './common/simpleModal.component';
+import { SimpleModalComponent } from './common/components/simpleModal.component';
 import { ModalTriggerDirective } from './common/directives/modalTrigger.directive';
-import { TeamComponent } from './home/team.component';
-import { TitlecardComponent } from './home/titlecard.component';
+import { TeamComponent } from './home/components/team.component';
+import { TitlecardComponent } from './home/components/titlecard.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { CarousalComponent } from './common/components/carousal.component';
+import { VolunteersComponent } from './volunteers/volunteers.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -32,6 +34,7 @@ let jQuery = window['$'];
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
@@ -40,6 +43,7 @@ let jQuery = window['$'];
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    CarousalComponent,
     TeamComponent,
     TitlecardComponent,
     HomeComponent,
@@ -48,6 +52,7 @@ let jQuery = window['$'];
     EventThumbnailComponent,
     ContactComponent,
     ProjectComponent,
+    VolunteersComponent,
     SimpleModalComponent,
     ModalTriggerDirective,
     Error404Component,
@@ -58,7 +63,6 @@ let jQuery = window['$'];
     { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
-    AuthService,
     { provide: 'canDeactivateEventThumbnail', useValue: checkDirtyState },
   ],
   bootstrap: [AppComponent],

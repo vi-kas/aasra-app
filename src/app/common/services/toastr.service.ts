@@ -1,4 +1,4 @@
-import { Injectable, InjectionToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
 // Toastr Dependency Injection
 export let TOASTR_TOKEN = new InjectionToken<any>('toastr');

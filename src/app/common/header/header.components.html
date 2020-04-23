@@ -1,14 +1,7 @@
-<div class="container" id="v-nav">
+<div class="container-fluid">
   <nav class="navbar sticky-top navbar-expand-lg">
-    <div class="">
-      <div class="navbar-brand" to="#">
-        <img
-          src="./assets/images/aasraicon.png"
-          width="80"
-          height="80"
-          alt=""
-        />
-      </div>
+    <div class="navbar-brand" to="#">
+      <img src="./assets/images/aasra_icon_2.png" height="100" alt="" />
     </div>
     <button
       class="navbar-toggler"
@@ -22,7 +15,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div
+      class="collapse navbar-collapse"
+      style="display: flex; justify-content: flex-end;"
+    >
       <div class="navbar-nav">
         <div class="nav-link-item">
           <div class="nav-link">
@@ -40,7 +36,7 @@
         </div>
         <div class="nav-link-item">
           <div class="nav-link">
-            <a [routerLink]="['']">
+            <a [routerLink]="['volunteers']">
               <span class="navItemText">VOLUNTEERS</span>
             </a>
           </div>
@@ -55,25 +51,14 @@
         <div class="nav-link-item">
           <div class="nav-link">
             <a [routerLink]="['contactus']">
-              <span class="navItemText">CONTACT US</span>
+              <span class="navItemText">CONTACT</span>
             </a>
           </div>
         </div>
-        <div class="nav-link-item">
+        <div id="nav-link-item">
           <div class="nav-link">
-            <a
-              *ngIf="!authService.isAuthenticated()"
-              [routerLink]="['user/login']"
-            >
-              <span class="navItemText">Login</span>
-            </a>
-            <a
-              *ngIf="authService.isAuthenticated()"
-              [routerLink]="['user/profile']"
-            >
-              <span class="navItemText"
-                >Welcome {{this.authService.currentUser.name}}</span
-              >
+            <a [routerLink]="['contactus']">
+              <span class="navItemText" style="color: #e81a5b;">DONATE</span>
             </a>
           </div>
         </div>
