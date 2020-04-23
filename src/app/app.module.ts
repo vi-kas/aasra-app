@@ -27,6 +27,7 @@ import { TitlecardComponent } from './home/components/titlecard.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { CarousalComponent } from './common/components/carousal.component';
 import { VolunteersComponent } from './volunteers/volunteers.component';
+import { ProjectThumbnailComponent } from './common/components/projectThumbnail/projectThumbnail.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -50,6 +51,7 @@ let jQuery = window['$'];
     EventsComponent,
     EventDetailsComponent,
     EventThumbnailComponent,
+    ProjectThumbnailComponent,
     ContactComponent,
     ProjectComponent,
     VolunteersComponent,

@@ -1,3 +1,46 @@
 <div class="heroDiv" style="background-color: burlywood;">
   <p>PROJECTS</p>
 </div>
+
+<div class="container-fluid">
+  <div style="margin-left: 5%; margin-top: 3%;">
+    <div class="row">
+      <h1 id="projectHeroTitle">WITH YOU, WE CAN DO MORE</h1>
+    </div>
+    <div class="row">
+      <p id="projectHeroDescription">
+        We are continuously working, thanks for the support of all social
+        workers and volunteers.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-left: 4%; margin-top: 2%;">
+    <div class="col-md-10">
+      <div class="row">
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[0]"
+          class="col-mid-4"
+        ></project-thumbnail>
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[1]"
+          class="col-mid-4"
+        ></project-thumbnail>
+      </div>
+
+      <div class="row" style="margin-top: 20%;">
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[2]"
+          class="col-mid-4"
+        ></project-thumbnail>
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[3]"
+          class="col-mid-4"
+        ></project-thumbnail>
+      </div>
+    </div>
+    <div class="col-md-2" style="margin-top: 2%;">
+      <h2>Tags</h2>
+    </div>
+  </div>
+</div>

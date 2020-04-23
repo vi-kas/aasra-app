@@ -1,68 +1,70 @@
-<div class="container-fluid">
-  <nav class="navbar sticky-top navbar-expand-lg">
-    <div class="navbar-brand" to="#">
-      <img src="./assets/images/aasra_icon_2.png" height="100" alt="" />
-    </div>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="sticky navbar navbar-expand-lg navbar-fixed-top sticky">
+  <div class="navbar-brand" to="#">
+    <img src="./assets/images/aasra_icon_2.png" height="100" alt="" />
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div
-      class="collapse navbar-collapse"
-      style="display: flex; justify-content: flex-end;"
-    >
-      <div class="navbar-nav">
-        <div class="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['home']">
-              <span class="navItemText">HOME</span>
-            </a>
-          </div>
+  <div
+    class="collapse navbar-collapse"
+    style="display: flex; justify-content: space-around;"
+  >
+    <div class="navbar-nav">
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['home']">
+            <span class="navItemText">HOME</span>
+          </a>
         </div>
-        <div class="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['events']">
-              <span class="navItemText">EVENTS</span>
-            </a>
-          </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['events']">
+            <span class="navItemText">EVENTS</span>
+          </a>
         </div>
-        <div class="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['volunteers']">
-              <span class="navItemText">VOLUNTEERS</span>
-            </a>
-          </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['volunteers']">
+            <span class="navItemText">VOLUNTEERS</span>
+          </a>
         </div>
-        <div class="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['projects']">
-              <span class="navItemText">PROJECTS</span>
-            </a>
-          </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['projects']">
+            <span class="navItemText">PROJECTS</span>
+          </a>
         </div>
-        <div class="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['contactus']">
-              <span class="navItemText">CONTACT</span>
-            </a>
-          </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['contactus']">
+            <span class="navItemText">CONTACT</span>
+          </a>
         </div>
-        <div id="nav-link-item">
-          <div class="nav-link">
-            <a [routerLink]="['contactus']">
-              <span class="navItemText" style="color: #e81a5b;">DONATE</span>
-            </a>
-          </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['contactus']">
+            <span
+              class="navItemText"
+              style="color: #e81a5b; background-attachment: fixed;"
+              >DONATE</span
+            >
+          </a>
         </div>
       </div>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
