@@ -28,6 +28,8 @@ import { FooterComponent } from './common/footer/footer.component';
 import { CarousalComponent } from './common/components/carousal.component';
 import { VolunteersComponent } from './volunteers/volunteers.component';
 import { ProjectThumbnailComponent } from './common/components/projectThumbnail/projectThumbnail.component';
+import { TwitterTimelineComponent } from './common/components/twitterTimeline/twitterTimeline.component';
+import { VolunteerThumbnailComponent } from './volunteers/components/volunteerThumbnail.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -48,7 +50,9 @@ let jQuery = window['$'];
     TeamComponent,
     TitlecardComponent,
     HomeComponent,
+    TwitterTimelineComponent,
     EventsComponent,
+    VolunteerThumbnailComponent,
     EventDetailsComponent,
     EventThumbnailComponent,
     ProjectThumbnailComponent,

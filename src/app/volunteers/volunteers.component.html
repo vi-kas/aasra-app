@@ -4,3 +4,39 @@
 <div class="heroDiv" style="background-color: pink;">
   <p>VOLUNTEERS</p>
 </div>
+
+<div class="container-fluid" style="margin-left: 5%; margin-top: 5%;">
+  <div class="row">
+    <h1 id="projectHeroTitle">MEET OUR TEAM</h1>
+  </div>
+
+  <div class="row">
+    <p id="projectHeroDescription">
+      As a Team, we are continuously working, thanks for the support of all
+      social workers and volunteers.
+    </p>
+  </div>
+
+  <div class="row" style="margin-top: 5%;">
+    <volunteer-thumbnail
+      [volunteer]="volunteers[0]"
+      class="col-mid-4"
+    ></volunteer-thumbnail>
+    <volunteer-thumbnail
+      [volunteer]="volunteers[1]"
+      class="col-mid-4"
+    ></volunteer-thumbnail>
+    <volunteer-thumbnail
+      [volunteer]="volunteers[2]"
+      class="col-mid-4"
+    ></volunteer-thumbnail>
+  </div>
+
+  <div class="row">
+    <volunteer-thumbnail [volunteer]="volunteers[0]"></volunteer-thumbnail>
+    <volunteer-thumbnail [volunteer]="volunteers[1]"></volunteer-thumbnail>
+    <volunteer-thumbnail [volunteer]="volunteers[2]"></volunteer-thumbnail>
+    <volunteer-thumbnail [volunteer]="volunteers[2]"></volunteer-thumbnail>
+    <volunteer-thumbnail [volunteer]="volunteers[2]"></volunteer-thumbnail>
+  </div>
+</div>
