@@ -1,6 +1,132 @@
-<div class="heroDiv">
-  <p>HOME</p>
+<div id="homeHeroDiv">
+  <carousal [slides]="slides"></carousal>
 </div>
+
+<div class="container-fluid">
+  <div style="margin-left: 4%; margin-top: 8%; margin-right: 2%;">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../assets/images/unsplash_3.jpg" style="width: 100%;" />
+      </div>
+      <div class="col-md-6" style="width: 100%;">
+        <h1 class="projectHeroTitle">COPING WITH THE EFFECTS OF COVID-19</h1>
+        <p
+          class="homeHeroDescription"
+          style="font-size: 1.2em; font-weight: bold;"
+        >
+          Help vulnerable individuals & families stay #SafeAtHome during this
+          difficult period!
+        </p>
+        <p class="homeHeroDescription">
+          The current COVID-19 situation and stay-home measures could mean a
+          loss of jobs/income, additional stressors due to changes and
+          uncertainties, or threats to the mental health and recovery process of
+          vulnerable populations. We appeal for your generous donation to help
+          us support single-parent families, teenage girls recovering from the
+          trauma of abuse, and ex-offenders during COVID-19 💗
+        </p>
+        <a href="" style="font-size: 1.2em; font-weight: 900; color: #e81a5b;"
+          >DONATE NOW</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div id="hero-card-deck-container">
+    <div style="margin-top: 8%;">
+      <h1
+        class="projectHeroTitle"
+        style="
+          font-family: futura-pt;
+          text-align: center;
+          color: whitesmoke;
+          padding-top: 3%;
+        "
+      >
+        WHO WE ARE
+      </h1>
+    </div>
+    <div class="card-deck" id="hero-card-deck">
+      <div class="card card-img">
+        <a href=""
+          ><img
+            src="../../assets/images/aasraImg1.jpg"
+            class="card-img-top"
+            alt="..."
+        /></a>
+        <div class="card-body">
+          <a href="" class="card-title card-title-text">PROJECTS</a>
+          <p class="card-text">
+            We have taken <strong>Initiatives</strong> and working on a number
+            of projects. Get in touch to be a part of them.
+          </p>
+        </div>
+      </div>
+      <div class="card card-img">
+        <a href="">
+          <img
+            src="../../assets/images/aasraImg2.jpg"
+            class="card-img-top"
+            alt="..."
+        /></a>
+
+        <div class="card-body">
+          <a href="" class="card-title card-title-text">JOIN US</a>
+          <p class="card-text">
+            We are <strong>Working!</strong> Join us hand in hand and make an
+            impact. Get in touch to become a volunteer.
+          </p>
+        </div>
+      </div>
+      <div class="card card-img">
+        <a href="">
+          <img
+            src="../../assets/images/aasraImg3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+        </a>
+        <div class="card-body">
+          <a href="" class="card-title card-title-text">EVENTS</a>
+          <p class="card-text">
+            We are raising <strong>Awareness</strong> through various events.
+            Take a look at our organized events.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 8%;">
+    <h1
+      class="projectHeroTitle"
+      style="font-family: futura-pt; text-align: center;"
+    >
+      WHATS IN NEWS
+    </h1>
+  </div>
+
+  <div class="row" style="margin-left: 4%; margin-top: 2%;">
+    <div class="col-md-12">
+      <div class="row">
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[0]"
+          class="col-mid-"
+        ></project-thumbnail>
+        <project-thumbnail
+          [thumbnailContent]="projectThumbnail[1]"
+          class="col-mid-4"
+        ></project-thumbnail>
+        <twitter-timeline class="col-md-4"></twitter-timeline>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <team></team> -->
+<!-- <div class="container contaienr-bg">
+  <carousal [slides]="slides"></carousal>
+</div> -->
 
 <!-- <div class="container-fluid">
   <div class="row a-hero-div">
