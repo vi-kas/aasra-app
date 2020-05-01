@@ -30,6 +30,9 @@ import { VolunteersComponent } from './volunteers/volunteers.component';
 import { ProjectThumbnailComponent } from './common/components/projectThumbnail/projectThumbnail.component';
 import { TwitterTimelineComponent } from './common/components/twitterTimeline/twitterTimeline.component';
 import { VolunteerThumbnailComponent } from './volunteers/components/volunteerThumbnail.component';
+import { ImageGallaryComponent } from './common/components/imageGallary/imageGallary.component';
+import { FrontComponent } from './home/front.component';
+import { BSCarousalComponent } from './common/components/bs-carousal/bsCaraousal.component';
 
 let toastr: IToastr = window['toastr'];
 let jQuery = window['$'];
@@ -47,9 +50,11 @@ let jQuery = window['$'];
     HeaderComponent,
     FooterComponent,
     CarousalComponent,
+    BSCarousalComponent,
     TeamComponent,
     TitlecardComponent,
     HomeComponent,
+    FrontComponent,
     TwitterTimelineComponent,
     EventsComponent,
     VolunteerThumbnailComponent,
@@ -60,6 +65,7 @@ let jQuery = window['$'];
     ProjectComponent,
     VolunteersComponent,
     SimpleModalComponent,
+    ImageGallaryComponent,
     ModalTriggerDirective,
     Error404Component,
   ],

@@ -26,8 +26,8 @@ import { IThumbnailContent } from './projectThumbnail.modal';
         font-variant: small-caps slashed-zero;
       }
       .thumbnail-img {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
         border-radius: 0.3em;
       }
       .thumbnail-img:hover {

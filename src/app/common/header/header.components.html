@@ -1,42 +1,31 @@
-<nav class="sticky navbar navbar-expand-lg navbar-fixed-top sticky">
-  <div class="navbar-brand" to="#">
-    <img src="./assets/images/aasra_icon_2.png" height="100" alt="" />
+<nav class="sticky navbar navbar-expand-lg navbar-dark navbar-fixed-top sticky">
+  <div id="headerImgDiv" href="" class="navbar-brand" to="#">
+    <img
+      href=""
+      id="headerImg"
+      height="70px"
+      src="./assets/images/aasra_icon_white_hand.png"
+      alt=""
+    />
   </div>
   <button
-    class="navbar-toggler"
+    class="navbar-toggler navbar-toggler-right"
     type="button"
     data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div
-    class="collapse navbar-collapse"
-    style="display: flex; justify-content: space-around;"
-  >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav">
       <div class="nav-link-item">
         <div class="nav-link">
           <a [routerLink]="['home']">
             <span class="navItemText">HOME</span>
-          </a>
-        </div>
-      </div>
-      <div class="nav-link-item">
-        <div class="nav-link">
-          <a [routerLink]="['events']">
-            <span class="navItemText">EVENTS</span>
-          </a>
-        </div>
-      </div>
-      <div class="nav-link-item">
-        <div class="nav-link">
-          <a [routerLink]="['volunteers']">
-            <span class="navItemText">VOLUNTEERS</span>
           </a>
         </div>
       </div>
@@ -49,8 +38,29 @@
       </div>
       <div class="nav-link-item">
         <div class="nav-link">
+          <a [routerLink]="['volunteers']">
+            <span class="navItemText">TEAM</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['contactus']">
+            <span class="navItemText">BLOG</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
           <a [routerLink]="['contactus']">
             <span class="navItemText">CONTACT</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-link-item">
+        <div class="nav-link">
+          <a [routerLink]="['events']">
+            <span class="navItemText">ABOUT</span>
           </a>
         </div>
       </div>

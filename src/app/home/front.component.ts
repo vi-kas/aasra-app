@@ -1,53 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, Inject, AfterViewInit, OnDestroy } from '@angular/core';
 import { IThumbnailContent } from '../common/components/projectThumbnail/projectThumbnail.modal';
+import { JQ_TOKEN } from '../common/services/jquery.service';
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styles: [
-    `
-      .projectHeroTitle {
-        color: #000000;
-        font-family: 'Libre Baskerville', Arial, Helvetica, 'Nimbus Sans L',
-          sans-serif;
-        hyphens: manual;
-        -webkit-transform: scaleX(1.2);
-        transform: scaleY(1.2);
-        font-weight: bold;
-        letter-spacing: 1px;
-        font-variant: small-caps slashed-zero;
-      }
-      .projectHeroDescription {
-        padding-top: 1%;
-        font-size: 1.15em;
-        font-family: Georgia, serif;
-      }
-      .homeHeroDescription {
-        padding-top: 3%;
-        font-size: 1.15em;
-        font-family: Georgia, serif;
-      }
-      .newsText {
-        color: #000000;
-        font-family: 'Libre Baskerville', Arial, Helvetica, 'Nimbus Sans L',
-          sans-serif;
-        font-weight: 500;
-        letter-spacing: 1.5px;
-        font-variant: small-caps slashed-zero;
-      }
-      .card-title-text {
-        color: #000000;
-        font-family: 'Libre Baskerville', Arial, Helvetica, 'Nimbus Sans L',
-          sans-serif;
-        font-weight: 900;
-        letter-spacing: 1px;
-        color: #e81a5b;
-      }
-    `,
-  ],
+  selector: 'front',
+  templateUrl: './front.component.html',
+  styleUrls: ['./front.component.css'],
 })
-export class HomeComponent {
+export class FrontComponent implements AfterViewInit, OnDestroy {
   public slides = [{ src: '../assets/images/gallery/aasra_00.jpg' }];
+
+  constructor(@Inject(JQ_TOKEN) private $: any) {}
+
+  ngAfterViewInit() {
+    this.$('.fancybox').fancybox({
+      openEffect: 'none',
+      closeEffect: 'none',
+    });
+
+    this.$('.zoom').hover(
+      function () {
+        this.$(this).addClass('transition');
+      },
+      function () {
+        this.$(this).removeClass('transition');
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    this.$('.fancybox').off();
+  }
+
+  ngOnInit(): void {}
 
   public projectThumbnail: IThumbnailContent[] = [
     {
