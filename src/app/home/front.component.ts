@@ -1,43 +1,28 @@
-import { Component, Inject, AfterViewInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  Inject,
+  AfterViewInit,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { IThumbnailContent } from '../common/components/projectThumbnail/projectThumbnail.modal';
 import { JQ_TOKEN } from '../common/services/jquery.service';
+import { IGallaryImage } from '../common/components/bs-gallery/bsGallery.modal';
 
 @Component({
   selector: 'front',
   templateUrl: './front.component.html',
   styleUrls: ['./front.component.css'],
 })
-export class FrontComponent implements AfterViewInit, OnDestroy {
+export class FrontComponent {
   public slides = [{ src: '../assets/images/gallery/aasra_00.jpg' }];
 
   constructor(@Inject(JQ_TOKEN) private $: any) {}
 
-  ngAfterViewInit() {
-    this.$('.fancybox').fancybox({
-      openEffect: 'none',
-      closeEffect: 'none',
-    });
-
-    this.$('.zoom').hover(
-      function () {
-        this.$(this).addClass('transition');
-      },
-      function () {
-        this.$(this).removeClass('transition');
-      }
-    );
-  }
-
-  ngOnDestroy() {
-    this.$('.fancybox').off();
-  }
-
-  ngOnInit(): void {}
-
-  public projectThumbnail: IThumbnailContent[] = [
+  public galleryImages: IGallaryImage[] = [
     {
       id: 1,
-      title: 'AASRA NON-FORMAL EDUCATION ',
+      thumbnail: 'AASRA NON-FORMAL EDUCATION ',
       imageUrl: '../../../../assets/images/unsplash_1.jpg',
       description: `
     We started a non formal education center for children in hatwara basti for
@@ -46,7 +31,7 @@ export class FrontComponent implements AfterViewInit, OnDestroy {
     },
     {
       id: 2,
-      title: 'TITLE FOR SECOND PROJECT IN JAIPUR',
+      thumbnail: 'TITLE FOR SECOND PROJECT IN JAIPUR',
       imageUrl: '../../../../assets/images/unsplash_2.jpg',
       description: `
     We started a non formal education center for children in hatwara basti for
@@ -55,7 +40,7 @@ export class FrontComponent implements AfterViewInit, OnDestroy {
     },
     {
       id: 3,
-      title: 'TITLE FOR THIRD PROJECT IN JAIPUR',
+      thumbnail: 'TITLE FOR THIRD PROJECT IN JAIPUR',
       imageUrl: '../../../../assets/images/unsplash_3.jpg',
       description: `
     We started a non formal education center for children in hatwara basti for
@@ -64,7 +49,7 @@ export class FrontComponent implements AfterViewInit, OnDestroy {
     },
     {
       id: 4,
-      title: 'TITLE FOR FOURTH PROJECT IN JAIPUR',
+      thumbnail: 'TITLE FOR FOURTH PROJECT IN JAIPUR',
       imageUrl: '../../../../assets/images/unsplash_2.jpg',
       description: `
     We started a non formal education center for children in hatwara basti for

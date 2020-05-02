@@ -30,7 +30,7 @@ import { VolunteersComponent } from './volunteers/volunteers.component';
 import { ProjectThumbnailComponent } from './common/components/projectThumbnail/projectThumbnail.component';
 import { TwitterTimelineComponent } from './common/components/twitterTimeline/twitterTimeline.component';
 import { VolunteerThumbnailComponent } from './volunteers/components/volunteerThumbnail.component';
-import { ImageGallaryComponent } from './common/components/imageGallary/imageGallary.component';
+import { ImageGallaryComponent } from './common/components/bs-gallery/bsGallery.component';
 import { FrontComponent } from './home/front.component';
 import { BSCarousalComponent } from './common/components/bs-carousal/bsCaraousal.component';
 
