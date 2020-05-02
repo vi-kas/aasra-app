@@ -16,36 +16,6 @@ body {
   background-size: cover;
 }
 
-.navItemText {
-  color: #000000;
-  font-family: "Gotham";
-  font-size: 1.5em;
-  font-weight: 500;
-  font-stretch: semi-condensed;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
-}
-
-.navItemText:hover,
-.navItemText:active,
-.navItemText:focus {
-  color: #e81a5b;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.nav-link-item {
-  margin-left: 1em;
-}
-
 .footer-text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -65,7 +35,7 @@ body {
   margin-top: 4%;
   left: 0px;
   width: calc(100% - 10px);
-  height: 400px;
+  height: 450px;
   background-color: #e81a5b;
   padding: 100px;
   font-family: Gotham;
@@ -97,10 +67,7 @@ body {
 .navbar-brand {
   margin-left: 0px;
 } */
-/* 
-.navbar-nav {
-  margin-left: 32%;
-} */
+
 /* 
 .nav-link-item {
   margin-left: 1.5rem;
@@ -239,29 +206,4 @@ body {
 
 .a-mg-l {
   margin-top: 2%;
-}
-
-.footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-size: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-}
-
-/* Footer */
-.copyright-text {
-  width: 100%;
-  text-align: center;
-  font-size: 0.8em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-}
-
-.copyright {
-  margin-top: 1em;
 }

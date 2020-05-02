@@ -6,10 +6,8 @@ import { Component } from '@angular/core';
   styles: [
     `
       .thumbnail-div {
-        height: 400px;
+        height: 300px;
         width: 430px;
-        padding-top: 10%;
-        padding-right: 6%;
       }
     `,
   ],

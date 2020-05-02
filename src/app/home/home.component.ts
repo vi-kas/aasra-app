@@ -47,11 +47,7 @@ import { IThumbnailContent } from '../common/components/projectThumbnail/project
   ],
 })
 export class HomeComponent {
-  public slides = [
-    { src: '../assets/images/home_1.png' },
-    { src: '../assets/images/home_2.png' },
-    { src: '../assets/images/home_1.png' },
-  ];
+  public slides = [{ src: '../assets/images/gallery/aasra_00.jpg' }];
 
   public projectThumbnail: IThumbnailContent[] = [
     {

@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styles: [
     `
       .modal-body {
-        hight: 250px;
+        hight: 700px;
         overflow-y: scroll;
       }
     `,

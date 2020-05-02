@@ -1,0 +1,26 @@
+<div class="bs-gallery">
+  <ng-container
+    *ngFor="let galleryImage of galleryImages; let i = index"
+    [attr.data-index]="i"
+  >
+    <div class="col-sm-3 col-sm-offset-1 float-left">
+      <img
+        [src]="galleryImage.imageUrl"
+        class="gallery-image"
+        style="max-width: 100%; max-height: 100%;"
+        modal-trigger="{{ galleryImage.id }}"
+      />
+      <simple-modal
+        elementId="{{ galleryImage.id }}"
+        title="{{ galleryImage.id }}"
+      >
+        <div>
+          <img
+            [src]="galleryImage.imageUrl"
+            style="max-width: 100%; max-height: 100%;"
+          />
+        </div>
+      </simple-modal>
+    </div>
+  </ng-container>
+</div>
